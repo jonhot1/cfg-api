@@ -19,7 +19,7 @@ app.use('/users', usersRouter);
 
 
 const bodyParser = require('body-parser')
-const users=require('../cfg-api/routes/user')
+const users=require('./routes/users')
 
 app.use(logger('dev'));
 app.use(express.json());
