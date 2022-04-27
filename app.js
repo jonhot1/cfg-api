@@ -19,7 +19,7 @@ app.use('/users', usersRouter);
 
 
 const bodyParser = require('body-parser')
-const users=require('./routes/users')
+const users=require('./routes/user')
 
 app.use(logger('dev'));
 app.use(express.json());
