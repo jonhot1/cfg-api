@@ -40,7 +40,6 @@ window.initMap = initMap;
 async function getData(){
     var targetUrl = 'https://cfg-api-ultimate.herokuapp.com/stores'
 
-
     const response = await fetch(targetUrl)
     const data = await response.json()
     console.log(data)
