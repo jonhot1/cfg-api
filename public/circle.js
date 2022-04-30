@@ -128,6 +128,7 @@ async function initMap() {
             radius: Math.sqrt(json[i].st_x)*10,
         });
 
+
     }
 }
 
