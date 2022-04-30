@@ -46,7 +46,6 @@ async function getData(){
     console.log(data)
     return data
 
-
     // var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
     //     targetUrl = 'https://cfg-api-ultimate.herokuapp.com/stores'
     //
