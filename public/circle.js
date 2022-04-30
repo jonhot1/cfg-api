@@ -127,6 +127,7 @@ async function initMap() {
             // center: citymap.lisboa.center,
             radius: Math.sqrt(json[i].st_x)*10,
         });
+
     }
 }
 
