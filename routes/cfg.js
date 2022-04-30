@@ -1,6 +1,7 @@
 const client = require('../models/connection')
 const express = require('express');
 const {log} = require("debug");
+const {md5} = require("pg/lib/utils");
 const app = express();
 
 client.connect();
@@ -14,6 +15,25 @@ const getCfg = (request, response) => {
     })
 }
 
+const getCfgBySoftware = (request, response) => {
+    client.query('SELECT * FROM cfg', (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(200).json(results.rows)
+    })
+}
+
+const createCfg = (request, response) => {
+    const cfg = request.body
+
+    client.query('INSERT INTO cfg (cfg_name) VALUES ($1)', [cfg.cfg_name.toString()], (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(201).send(`User added`)
+    })
+}
 
 const getCfgById = (request, response) => {
     const id = parseInt(request.params.id)
@@ -33,5 +53,6 @@ const getCfgById = (request, response) => {
 
 module.exports = {
     getCfg,
-    getCfgById
+    getCfgById,
+    createCfg
 }

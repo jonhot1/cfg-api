@@ -48,6 +48,7 @@ app.delete('/users/:id', users.deleteUser)
 //cfg
 app.get('/cfg', cfg.getCfg)
 app.get('/cfg/:id', cfg.getCfgById)
+app.post('/cfg', cfg.createCfg)
 
 app.get('/stores', stores.getStores)
 
