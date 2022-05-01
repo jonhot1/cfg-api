@@ -16,7 +16,8 @@ const getCfg = (request, response) => {
 }
 
 const getCfgBySoftware = (request, response) => {
-    client.query('SELECT * FROM cfg', (error, results) => {
+    const id = parseInt(request.params.id)
+    client.query('Select * from cfg inner join software s on cfg.cfg_software_id = s.software_id where cfg_id = $1', [id], (error, results) => {
         if (error) {
             throw error
         }
@@ -65,5 +66,6 @@ module.exports = {
     getCfg,
     getCfgById,
     createCfg,
-    deleteCfg
+    deleteCfg,
+    getCfgBySoftware
 }
