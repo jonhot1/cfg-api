@@ -18,7 +18,6 @@ const app = express();
 
 client.connect();
 
-const client = require("../../cfg-api/models/connection");
 const getGames = (request, response) => {
     client.query('SELECT * FROM software where software_is_game=true', (error, results) => {
         if (error) {
@@ -37,3 +36,5 @@ const getApps = (request, response) => {
         response.status(200).json(results.rows)
     })
 }
+
+module.exports={getApps,getGames}
