@@ -18,12 +18,11 @@ async function getData(){
     return data
 
 }
-    
+
 window.onload = async function() {
 
     const json = await getData()
     console.log(json[0])
-    let completelist = document.getElementById("text");
     var table = document.getElementById("UsersTable");
     for (let i = 0; i < json.length; i++) {
         var row = table.insertRow(2);
