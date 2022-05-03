@@ -21,6 +21,13 @@ async function getData(){
 
 
 async function delet(id){
+   await refresh(id)
+    alert("User Deleted")
+  window.location.reload()
+}
+
+
+async function refresh(id){
     const json = await getData()
 
     $.ajax({
@@ -29,21 +36,17 @@ async function delet(id){
         dataType: 'json',
         success: function(response) {
             console.log(response);
-           // window.location.replace("https//www.google.com")
-            refresh()
+            // window.location.replace("https//www.google.com")
+
         }
     });
-      await refresh()
     // await table()
-}
-
-function refresh(){
-    window.location.href="../Dashboard/index.html"
 }
 
 function myDeleteFunction() {
     document.getElementById("myTable").deleteRow(0);
 }
+
 async function table(){
     const json = await getData()
     console.log(json[0])
