@@ -34,7 +34,7 @@ window.onload = async function() {
         var cell7 = row.insertCell(6);
 
         cell1.innerHTML = "" + json[i].cfg_id
-        cell2.innerHTML = "mail"+ json[i].cfg_name
+        cell2.innerHTML = ""+ json[i].cfg_name
         cell3.innerHTML = "" + json[i].cfg_description
         cell4.innerHTML = "" + json[i].cfg_date
         cell5.innerHTML = "" + json[i].cfg_person_id

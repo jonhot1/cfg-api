@@ -54,10 +54,12 @@ async function table(){
         var cell2 = row.insertCell(1)
         var cell3 = row.insertCell(2)
         var cell4 = row.insertCell(3)
-        cell1.innerHTML = "" + json[i].person_name
-        cell2.innerHTML = "mail"+ json[i].person_email
-        cell3.innerHTML = "" + json[i].person_bio
-        cell4.innerHTML +="<td class=\"text-right\"><button type=\"button\" id='"+i+"' onClick=\"delet(this.id)\" href='index.html' class=\"btn btn-danger\">Delete</button></td>"
+        var cell5 = row.insertCell(4);
+        cell1.innerHTML = ""+json[i].person_id
+        cell2.innerHTML = "" + json[i].person_name
+        cell3.innerHTML = ""+ json[i].person_email
+        cell4.innerHTML = "" + json[i].person_bio
+        cell5.innerHTML +="<td class=\"text-right\"><button type=\"button\" id='"+i+"' onClick=\"delet(this.id)\" href='index.html' class=\"btn btn-danger\">Delete</button></td>"
 
     }
 }
