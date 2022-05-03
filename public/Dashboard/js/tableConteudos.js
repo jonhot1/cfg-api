@@ -10,7 +10,7 @@ async function getData(){
 
 
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-        targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users'
+        targetUrl = 'https://cfg-api-ultimate.herokuapp.com/cfg'
 
     const response = await fetch(
         proxyUrl + targetUrl)
@@ -18,22 +18,22 @@ async function getData(){
     return data
 
 }
-    
+
 window.onload = async function() {
 
     const json = await getData()
     console.log(json[0])
     let completelist = document.getElementById("text");
-    var table = document.getElementById("UsersTable");
+    var table = document.getElementById("ContentTable");
     for (let i = 0; i < json.length; i++) {
         var row = table.insertRow(2);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
-        cell1.innerHTML = "" + json[i].person_name
-        cell2.innerHTML = "mail"+ json[i].person_email
-        cell3.innerHTML = "" + json[i].person_bio
+        cell1.innerHTML = "" + json[i].cfg_id
+        cell2.innerHTML = "mail"+ json[i].cfg_name
+        cell3.innerHTML = "" + json[i].cfg_
         cell4.innerHTML +="<td class=\"text-right\"><button type=\"button\" class=\"btn btn-danger\">Delete</button></td>"
 
 
