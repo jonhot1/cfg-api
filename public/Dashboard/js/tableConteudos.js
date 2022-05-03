@@ -18,7 +18,6 @@ async function getData(){
     return data
 
 }
-
 window.onload = async function() {
 
     const json = await getData()
