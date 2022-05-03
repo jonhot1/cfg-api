@@ -55,9 +55,11 @@ window.onload = async function() {
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
         cell1.innerHTML = "" + json[i].person_name
         cell2.innerHTML = "mail"+ json[i].person_email
         cell3.innerHTML = "" + json[i].person_bio
+
 
 
     }
