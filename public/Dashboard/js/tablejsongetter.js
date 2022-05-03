@@ -35,6 +35,7 @@ async function delet(id){
     await table()
 }
 
+
 function myDeleteFunction() {
     document.getElementById("myTable").deleteRow(0);
 }
