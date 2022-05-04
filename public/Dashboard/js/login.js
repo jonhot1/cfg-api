@@ -20,8 +20,8 @@
 async function add() {
     var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
     let data = {
-        prod_type_id: (document.getElementById("email").value),
-        prod_price: (document.getElementById("password").value)
+        person_email: (document.getElementById("email").value),
+        person_password: (document.getElementById("password").value)
     }
     console.log("[addProducts] data = " + JSON.stringify(data));
     console.log("data1" + JSON.stringify(data1));
@@ -31,7 +31,7 @@ async function add() {
         let newProduct = await $.ajax({
             url: "https://cfg-api-ultimate.herokuapp.com/login",
             method: "post",
-            data: JSON.stringify(data1),
+            data: JSON.stringify(data),
             contentType: "application/json",
             dataType: "json"
         });
