@@ -37,10 +37,9 @@ async function add() {
             dataType: "json"
         });
         alert(JSON.stringify(newProduct))
-        temp=newProduct
-        globalThis.yourGlobalVariable=temp
 
-        window.location.replace("https://cfg-api-ultimate.herokuapp.com/Dashboard/table.html")
+        sessionStorage.setItem("user_id",JSON.stringify(newProduct.person_id))
+
     } catch (err) {
         console.log(err);
         if (err.responseJSON) {
@@ -50,10 +49,6 @@ async function add() {
         }
     }
 }
- function maybe(){
-     globalThis.yourGlobalVariable=temp
-
- }
 
 
 

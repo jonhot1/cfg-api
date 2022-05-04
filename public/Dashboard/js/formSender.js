@@ -65,8 +65,9 @@ async function namemail(){
 
 window.onload = async function() {
 
-    alert("uma coisa sem")
-    alert("olaaaaaa"+yourGlobalVariable)
+    let id = sessionStorage.getItem("user_id")
+    alert("uma coisa sem"+id)
+    alert("olaaaaaa")
 
 
     await namemail()
