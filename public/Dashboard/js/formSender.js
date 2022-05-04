@@ -64,6 +64,11 @@ async function namemail(){
 }
 
 window.onload = async function() {
+    var a =foo()
+    alert("uma coisa sem")
+    alert("olaaaaaa"+foo())
+
+
     await namemail()
     const json = await getData()
     document.getElementById("inputName").value= ""+json[0].person_name;
@@ -76,9 +81,7 @@ window.onload = async function() {
 
 
 
-    var a =foo()
-    alert("uma coisa sem")
-    alert("olaaaaaa"+foo())
+
 
 
 }
