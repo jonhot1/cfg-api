@@ -1,21 +1,21 @@
 // Sending and receiving data in JSON format using POST method
 //
-function loging(){
-    var xhr = new XMLHttpRequest();
-    var url = "https://cfg-api-ultimate.herokuapp.com/login";
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var json = JSON.parse(xhr.responseText);
-            console.log(json.email + ", " + json.password);
-        }
-    };
-    var data = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
-    console.log(xhr.responseText)
-    xhr.send(data);
-
-}
+// function loging(){
+//     var xhr = new XMLHttpRequest();
+//     var url = "https://cfg-api-ultimate.herokuapp.com/login";
+//     xhr.open("POST", url, true);
+//     xhr.setRequestHeader("Content-Type", "application/json");
+//     xhr.onreadystatechange = function () {
+//         if (xhr.readyState === 4 && xhr.status === 200) {
+//             var json = JSON.parse(xhr.responseText);
+//             console.log(json.email + ", " + json.password);
+//         }
+//     };
+//     var data = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
+//     console.log(xhr.responseText)
+//     xhr.send(data);
+//
+// }
 
 async function add() {
     var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
@@ -24,7 +24,7 @@ async function add() {
         prod_price: (document.getElementById("password").value)
     }
     console.log("[addProducts] data = " + JSON.stringify(data));
-    console.log("[addProducts] data = " + JSON.stringify(data1));
+    console.log("data1" + JSON.stringify(data1));
     try {
 
         //get json here
