@@ -64,9 +64,9 @@ async function namemail(){
 }
 
 window.onload = async function() {
-    var a =foo()
+
     alert("uma coisa sem")
-    alert("olaaaaaa"+foo())
+    alert("olaaaaaa"+yourGlobalVariable)
 
 
     await namemail()

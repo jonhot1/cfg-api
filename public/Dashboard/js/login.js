@@ -16,6 +16,7 @@
 //     xhr.send(data);
 //
 // }
+var temp;
 
 async function add() {
     var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
@@ -36,7 +37,9 @@ async function add() {
             dataType: "json"
         });
         alert(JSON.stringify(newProduct))
-        yourGlobalVariable=newProduct
+        temp=newProduct
+        globalThis.yourGlobalVariable=temp
+
         window.location.replace("https://cfg-api-ultimate.herokuapp.com/Dashboard/table.html")
     } catch (err) {
         console.log(err);
@@ -47,11 +50,11 @@ async function add() {
         }
     }
 }
+ function maybe(){
+     globalThis.yourGlobalVariable=temp
 
-var yourGlobalVariable;
-function foo() {
-    return yourGlobalVariable
-}
+ }
+
 
 
 
