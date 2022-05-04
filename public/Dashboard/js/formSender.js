@@ -77,6 +77,7 @@ window.onload = async function() {
 
 
     var a =foo()
+    alert("uma coisa sem")
     alert("olaaaaaa"+foo())
 
 }
