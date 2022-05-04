@@ -36,6 +36,7 @@ async function add() {
             dataType: "json"
         });
         alert(JSON.stringify(newProduct))
+        yourGlobalVariable=newProduct
     } catch (err) {
         console.log(err);
         if (err.responseJSON) {
@@ -44,6 +45,11 @@ async function add() {
             alert("Was not able to add product") ;
         }
     }
+}
+
+var yourGlobalVariable;
+function foo() {
+    return yourGlobalVariable
 }
 
 

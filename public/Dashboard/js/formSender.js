@@ -24,7 +24,6 @@ async function upDate(){
 }
 
 
-
 async function getData(){
     // var targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users'
     //
@@ -77,6 +76,7 @@ window.onload = async function() {
 
 
 
-
+    var a =foo()
+    alert(""+foo())
 
 }
