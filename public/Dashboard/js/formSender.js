@@ -26,22 +26,22 @@ function upDate(){
 
 
 async function getData(){
-    // var targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users'
-    //
-    //
-    // const response = await fetch(targetUrl)
-    // const data = await response.json()
-    // console.log(data)
-    // return data
+    var targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users'
 
 
-    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-        targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users/1'
-
-    const response = await fetch(
-         targetUrl)
+    const response = await fetch(targetUrl)
     const data = await response.json()
+    console.log(data)
     return data
+
+
+    // var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    //     targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users/1'
+    //
+    // const response = await fetch(
+    //     proxyUrl + targetUrl)
+    // const data = await response.json()
+    // return data
 
 }
 
