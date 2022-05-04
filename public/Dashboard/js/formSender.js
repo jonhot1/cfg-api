@@ -1,6 +1,6 @@
 
 
-function upDate(){
+async function upDate(){
     var xhr = new XMLHttpRequest();
     var url = "https://cfg-api-ultimate.herokuapp.com/users";
     xhr.open("POST", url, true);
