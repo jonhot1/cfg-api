@@ -13,8 +13,36 @@ function loging(){
     };
     var data = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
     console.log(xhr.responseText)
-    var results = xhr.send(data);
-    alert(""+JSON.stringify(results))
+    xhr.send(data);
+
+}
+
+async function add() {
+
+    let data = {
+        prod_type_id: parseInt(document.getElementById("email").value),
+        prod_price: parseFloat(document.getElementById("password").value)
+    }
+    console.log("[addProducts] data = " + JSON.stringify(data));
+    try {
+
+        //get json here
+        let newProduct = await $.ajax({
+            url: "https://cfg-api-ultimate.herokuapp.com/login",
+            method: "post",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            dataType: "json"
+        });
+        alert(JSON.stringify(newProduct))
+    } catch (err) {
+        console.log(err);
+        if (err.responseJSON) {
+           alert(""+err.responseJSON.msg);
+        } else {
+            alert("Was not able to add product") ;
+        }
+    }
 }
 
 
