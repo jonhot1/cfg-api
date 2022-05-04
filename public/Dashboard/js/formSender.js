@@ -80,4 +80,5 @@ window.onload = async function() {
     alert("uma coisa sem")
     alert("olaaaaaa"+foo())
 
+
 }
