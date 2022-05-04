@@ -24,6 +24,7 @@ async function add() {
         prod_price: (document.getElementById("password").value)
     }
     console.log("[addProducts] data = " + JSON.stringify(data));
+    console.log("[addProducts] data = " + JSON.stringify(data1));
     try {
 
         //get json here
