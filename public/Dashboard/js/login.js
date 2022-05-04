@@ -2,7 +2,7 @@
 //
 function loging(){
     var xhr = new XMLHttpRequest();
-    var url = "https://cfgandshare-api.herokuapp.com/login";
+    var url = "https://cfg-api-ultimate.herokuapp.com/login";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function () {
@@ -18,10 +18,10 @@ function loging(){
 }
 
 async function add() {
-
+    var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
     let data = {
-        prod_type_id: parseInt(document.getElementById("email").value),
-        prod_price: parseFloat(document.getElementById("password").value)
+        prod_type_id: (document.getElementById("email").value),
+        prod_price: (document.getElementById("password").value)
     }
     console.log("[addProducts] data = " + JSON.stringify(data));
     try {
@@ -30,7 +30,7 @@ async function add() {
         let newProduct = await $.ajax({
             url: "https://cfg-api-ultimate.herokuapp.com/login",
             method: "post",
-            data: JSON.stringify(data),
+            data: JSON.stringify(data1),
             contentType: "application/json",
             dataType: "json"
         });
