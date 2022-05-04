@@ -37,6 +37,7 @@ async function add() {
         });
         alert(JSON.stringify(newProduct))
         yourGlobalVariable=newProduct
+        window.location.replace("https://cfg-api-ultimate.herokuapp.com/Dashboard/table.html")
     } catch (err) {
         console.log(err);
         if (err.responseJSON) {
