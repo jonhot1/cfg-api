@@ -2,7 +2,7 @@
 
 function upDate(){
     var xhr = new XMLHttpRequest();
-    var url = "https://cfgandshare-api.herokuapp.com/users";
+    var url = "https://cfg-api-ultimate.herokuapp.com/users";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function () {
@@ -39,7 +39,7 @@ async function getData(){
         targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users/1'
 
     const response = await fetch(
-        proxyUrl + targetUrl)
+         targetUrl)
     const data = await response.json()
     return data
 
