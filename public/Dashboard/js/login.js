@@ -14,7 +14,7 @@ function loging(){
     var data = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
     console.log(xhr.responseText)
     var results = xhr.send(data);
-    alert(""+results)
+    alert(""+JSON.stringify(results))
 }
 
 
