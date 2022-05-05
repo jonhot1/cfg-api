@@ -30,7 +30,6 @@ app.use(
     })
 )
 
-
 const stores = require('./routes/store')
 const cfg = require('./routes/cfg')
 const software=require('./routes/software')
