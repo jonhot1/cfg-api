@@ -12,7 +12,6 @@ async function upDate() {
         "person_adress":  document.getElementById('inputAdress').value,
         "person_bio":  document.getElementById('inputBio').value};
     console.log("[addProducts] data = " + JSON.stringify(data));
-    console.log("data1" + JSON.stringify(data1));
     try {
 
         //get json here
