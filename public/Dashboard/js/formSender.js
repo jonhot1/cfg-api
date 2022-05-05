@@ -11,17 +11,54 @@ async function upDate(){
             console.log(json.email + ", " + json.password);
         }
     };
-    var data = JSON.stringify({"person_name": document.getElementById('inputName').value,
+    var data = {"person_name": document.getElementById('inputName').value,
         "person_surname":  document.getElementById('inputSurname').value,
         "person_postal_code":  document.getElementById('inputPostalCode').value,
         "person_region":  document.getElementById('inputRegion').value,
         "person_country":  document.getElementById('inputCountry').value,
         "person_adress":  document.getElementById('inputAdress').value,
-        "person_bio":  document.getElementById('inputBio').value});
+        "person_bio":  document.getElementById('inputBio').value};
     console.log(xhr.responseText)
     alert(""+data)
-    xhr.send(data);
+    xhr.send(JSON.stringify(data));
 }
+
+
+async function add() {
+    var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
+    let data = {
+        person_email: (document.getElementById("email").value),
+        person_password: (document.getElementById("password").value)
+    }
+    console.log("[addProducts] data = " + JSON.stringify(data));
+    console.log("data1" + JSON.stringify(data1));
+    try {
+
+        //get json here
+        let newProduct = await $.ajax({
+            url: "https://cfg-api-ultimate.herokuapp.com/login",
+            method: "post",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            dataType: "json"
+        });
+        alert(JSON.stringify(newProduct))
+
+        sessionStorage.setItem("user_id",JSON.stringify(newProduct.person_id))
+        window.location.href='../../Dashboard/table.html'
+
+    } catch (err) {
+        console.log(err);
+        if (err.responseJSON) {
+            alert(""+err.responseJSON.msg);
+        } else {
+            alert("Was not able to add product") ;
+        }
+    }
+}
+
+
+
 
 
 async function getData(){
