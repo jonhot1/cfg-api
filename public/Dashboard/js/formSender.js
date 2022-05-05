@@ -16,7 +16,7 @@ async function upDate() {
 
         //get json here
         let newProduct = await $.ajax({
-            url: "https://cfg-api-ultimate.herokuapp.com/users",
+            url: "https://cfg-api-ultimate.herokuapp.com/users/"+id,
             method: "post",
             data: JSON.stringify(data),
             contentType: "application/json",
