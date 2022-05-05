@@ -1,5 +1,5 @@
 
-
+let id
 async function upDate(){
     var xhr = new XMLHttpRequest();
     var url = "https://cors-anywhere.herokuapp.com/https://cfg-api-ultimate.herokuapp.com/users";
@@ -35,7 +35,7 @@ async function getData(){
 
 
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-        targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users/1'
+        targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users/'+id
 
     const response = await fetch(
         proxyUrl + targetUrl)
@@ -65,7 +65,7 @@ async function namemail(){
 
 window.onload = async function() {
 
-    let id = sessionStorage.getItem("user_id")
+    id = sessionStorage.getItem("user_id")
     alert("uma coisa sem"+id)
     alert("olaaaaaa")
 
