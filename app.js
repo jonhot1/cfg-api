@@ -49,7 +49,7 @@ app.get('/cfg', cfg.getCfg)
 app.get('/cfg/:id', cfg.getCfgById)
 app.post('/cfg', cfg.createCfg)
 app.delete('/cfg/:id', cfg.deleteCfg)
-app.get('/cfg/software/:id', cfg.getCfgBySoftware)
+app.get('/cfg/software/:id', cfg.getCfgBySoftwareId)
 
 //store
 app.get('/stores', stores.getStores)
