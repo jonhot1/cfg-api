@@ -19,6 +19,7 @@ async function upDate(){
         "person_adress":  document.getElementById('inputAdress').value,
         "person_bio":  document.getElementById('inputBio').value});
     console.log(xhr.responseText)
+    alert(""+data)
     xhr.send(data);
 }
 
