@@ -2,7 +2,7 @@
 let id
 async function upDate(){
     var xhr = new XMLHttpRequest();
-    var url = "https://cors-anywhere.herokuapp.com/https://cfg-api-ultimate.herokuapp.com/users";
+    var url = "https://cfg-api-ultimate.herokuapp.com/users";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function () {
@@ -38,7 +38,7 @@ async function getData(){
         targetUrl = 'https://cfg-api-ultimate.herokuapp.com/users/'+id
 
     const response = await fetch(
-        proxyUrl + targetUrl)
+         targetUrl)
     const data = await response.json()
     return data
 
