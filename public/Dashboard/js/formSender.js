@@ -20,7 +20,7 @@ async function upDate(){
         "person_bio":  document.getElementById('inputBio').value});
     console.log(xhr.responseText)
     alert(""+data)
-    xhr.send(data);
+    xhr.send(JSON.stringify(data));
 }
 
 
