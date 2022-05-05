@@ -17,8 +17,7 @@ async function upDate(){
         "person_region":  document.getElementById('inputRegion').value,
         "person_country":  document.getElementById('inputCountry').value,
         "person_adress":  document.getElementById('inputAdress').value,
-        "person_bio":  document.getElementById('inputBio').value,
-        "person_surname":  document.getElementById('inputSurname').value});
+        "person_bio":  document.getElementById('inputBio').value});
     console.log(xhr.responseText)
     xhr.send(data);
 }
