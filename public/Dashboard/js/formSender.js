@@ -3,7 +3,7 @@ let id
 
 
 
-async function update() {
+async function upDate() {
     var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
     let data = {"person_name": document.getElementById('inputName').value,
         "person_surname":  document.getElementById('inputSurname').value,
