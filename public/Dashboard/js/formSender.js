@@ -1,42 +1,24 @@
 
 let id
-async function upDate(){
-    var xhr = new XMLHttpRequest();
-    var url = "https://cfg-api-ultimate.herokuapp.com/users";
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var json = JSON.parse(xhr.responseText);
-            console.log(json.email + ", " + json.password);
-        }
-    };
-    var data = {"person_name": document.getElementById('inputName').value,
+
+
+
+async function update() {
+    var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
+    let data = {"person_name": document.getElementById('inputName').value,
         "person_surname":  document.getElementById('inputSurname').value,
         "person_postal_code":  document.getElementById('inputPostalCode').value,
         "person_region":  document.getElementById('inputRegion').value,
         "person_country":  document.getElementById('inputCountry').value,
         "person_adress":  document.getElementById('inputAdress').value,
         "person_bio":  document.getElementById('inputBio').value};
-    console.log(xhr.responseText)
-    alert(""+JSON.stringify(data))
-    xhr.send(JSON.stringify(data));
-}
-
-
-async function add() {
-    var data1 = JSON.stringify({"person_email": document.getElementById('email').value, "person_password":  document.getElementById('password').value});
-    let data = {
-        person_email: (document.getElementById("email").value),
-        person_password: (document.getElementById("password").value)
-    }
     console.log("[addProducts] data = " + JSON.stringify(data));
     console.log("data1" + JSON.stringify(data1));
     try {
 
         //get json here
         let newProduct = await $.ajax({
-            url: "https://cfg-api-ultimate.herokuapp.com/login",
+            url: "https://cfg-api-ultimate.herokuapp.com/users",
             method: "post",
             data: JSON.stringify(data),
             contentType: "application/json",
