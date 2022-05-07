@@ -36,6 +36,7 @@ const createCfg = (request, response) => {
     })
 }
 
+
 const getCfgById = (request, response) => {
     const id = parseInt(request.params.id)
     client.query('SELECT * FROM cfg WHERE cfg_id = $1', [id], (error, results) => {
