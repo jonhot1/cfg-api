@@ -35,7 +35,7 @@ window.initMap = initMap;
 
 
 async function getData(){
-    var targetUrl = 'https://cfgandshare-orvn6iw6ka-nw.a.run.app/store'
+    var targetUrl = 'https://cfg-api-ultimate.herokuapp.com/store'
 
 
     const response = await fetch(targetUrl)
