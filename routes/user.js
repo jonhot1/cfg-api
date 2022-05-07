@@ -69,11 +69,11 @@ const createUser = (request, response) => {
 
 const updateUser = (request, response) => {
   const id = parseInt(request.params.id)
-  const { name, email } = request.body
+  const users = request.body
 
   client.query(
       'UPDATE person SET person_name = $1, person_email = $2 WHERE person_id = $3',
-      [name, email, id],
+      [users.person_name.toString(), users.person_email.toString(),id],
       (error, results) => {
         if (error) {
           throw error
