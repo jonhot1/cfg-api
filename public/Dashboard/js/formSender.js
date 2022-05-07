@@ -12,9 +12,8 @@ async function upDate() {
         "person_adress":  document.getElementById('inputAdress').value,
         "person_bio":  document.getElementById('inputBio').value};
     console.log("[addProducts] data = " + JSON.stringify(data));
-    alert("[addProducts] data = " + JSON.stringify(data));
     try {
-        alert(""+data)
+
         //get json here
         let newProduct = await $.ajax({
             url: "https://cfg-api-ultimate.herokuapp.com/users/"+id,
@@ -37,7 +36,6 @@ async function upDate() {
         }
     }
 }
-
 
 
 

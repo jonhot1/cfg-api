@@ -30,7 +30,7 @@ async function add() {
 
         //get json here
         let newProduct = await $.ajax({
-            url: "https://cfg-api-ultimate.herokuapp.com/login",
+            url: "https://cors-anywhere.herokuapp.com/https://cfg-api-ultimate.herokuapp.com/login",
             method: "post",
             data: JSON.stringify(data),
             contentType: "application/json",
